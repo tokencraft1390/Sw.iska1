@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aeterna Guarded WebMCP</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <p class="eyebrow">WEBMCP CHALLENGE · FRESH BUILD</p>
+      <h1>Aeterna Guarded WebMCP</h1>
+      <p class="lede">Trusted agent work runs automatically. Consequential actions stop at the real approval boundary.</p>
+      <div class="status-row">
+        <span id="webmcpStatus" class="pill">Checking WebMCP…</span>
+        <span class="pill">No wallet custody</span>
+        <span class="pill">No autonomous signing</span>
+      </div>
+    </header>
+
+    <section class="grid">
+      <article class="panel">
+        <div class="panel-head">
+          <div><p class="kicker">AUDIT TARGET</p><h2>Project snapshot</h2></div>
+          <button id="loadDemo" class="secondary">Load risky demo</button>
+        </div>
+        <p class="hint">Paste a small code or configuration sample. The WebMCP tools operate on this same page state.</p>
+        <textarea id="projectInput" spellcheck="false" aria-label="Project code sample" placeholder="Paste code or config here…"></textarea>
+        <div class="actions">
+          <button data-action="inspect">Inspect</button>
+          <button data-action="scan">Scan security</button>
+          <button data-action="patch">Propose patch</button>
+          <button data-action="validate">Validate</button>
+        </div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-head">
+          <div><p class="kicker">AGENT EVIDENCE</p><h2>Guarded execution log</h2></div>
+          <span id="trustMode" class="mode">AUTONOMOUS READ</span>
+        </div>
+        <div id="findings" class="findings empty">No findings yet.</div>
+        <pre id="output" class="output">Awaiting tool call.</pre>
+      </article>
+    </section>
+
+    <section class="panel approval-panel">
+      <div>
+        <p class="kicker">APPROVAL BOUNDARY</p>
+        <h2>Consequential action gate</h2>
+        <p id="approvalMessage">No approval request pending.</p>
+      </div>
+      <div class="approval-actions">
+        <button id="approve" disabled>Approve once</button>
+        <button id="deny" class="danger" disabled>Deny</button>
+      </div>
+    </section>
+
+    <section class="panel architecture">
+      <p class="kicker">TRUST ENVELOPE</p>
+      <div class="flow"><span>DISCOVER</span><b>→</b><span>INSPECT</span><b>→</b><span>ANALYZE</span><b>→</b><span>VERIFY</span><b>→</b><span>PROPOSE</span></div>
+      <p>Read, analyze, validate and evidence generation are autonomous. Production deploys, signing, payments, destructive writes and external commitments require explicit approval.</p>
+    </section>
+  </main>
+  <script src="app.js" defer></script>
+</body>
+</html>
